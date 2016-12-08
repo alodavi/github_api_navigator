@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Github Navigator</title>
+</head>
+<body>
+<h1>{{search_term}}</h1>
+
+<!-- loop -->
+
+{% for i in range(5) %}
+<h2>{{i + 1}}. {{data_list[i]["name"]}}</h2>
+<h3> Created {{data_list[i]["created_at"]}}</h3>
+<a href="{{data_list[i]["owner"]["owner_url"]}}"><img src="{{data_list[i]["owner"]["avatar_url"]}}" alt="avatar" height="42" width="42"/></a>
+{{data_list[i]["owner"]["login"]}}
+<h3>LastCommit</h3>
+{{last_commits[i]["sha"]}} {{last_commits[i]["commit"]["message"]}}  {{last_commits[i]["commit"]["committer"]["name"]}}
+<hr/>
+{% endfor %}
+</body>
+</html>
