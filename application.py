@@ -37,7 +37,7 @@ Routing to the homepage
 
 @app.route('/')
 def home():
-    return "<h1>Search terms throug the Github API.</h1><br><h2>Please follow the instructions.</h2>"
+    return "<h1>Search terms throug the Github API.</h1><br><h2>Please follow the following instructions:</h2><h3>Do GET request to e.g. http://localhost:5000/navigator?search_term=python</h3>"
 
 '''
 Routing to the navigator. It gets a search term as parameter and returns the list of the results (only 5) in descendent order.
